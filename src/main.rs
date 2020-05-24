@@ -22,7 +22,7 @@ async fn main() {
     let mut i = 0;
     while let Ok((inbound, _)) = listener.accept().await {
         let server_addr = proxies[i].clone();
-        i = (i + 1) % proxies.len();
+        i = (i + 1) % (proxies.len() - 1);
 
         let transfer = transfer(inbound, server_addr).map(|r| {
             if let Err(e) = r {
