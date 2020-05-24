@@ -1,0 +1,21 @@
+[package]
+name = "http_proxy"
+version = "0.1.0"
+authors = ["Shirshak <8097377+shirshak55@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "rproxy"
+path = "src/main.rs"
+
+[dependencies]
+tokio = {version= "0.2.18",features = ["full"] }
+futures = "0.3.5"
+
+[profile.release]
+lto = true
+opt-level = 'z'
+codegen-units = 1
+panic = 'abort'
