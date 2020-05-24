@@ -21,6 +21,7 @@ async fn main() {
 
     let mut i = 0;
     while let Ok((inbound, _)) = listener.accept().await {
+        println!("Request incoming {:?}", inbound);
         let server_addr = proxies[i].clone();
         i = (i + 1) % (proxies.len() - 1);
 
