@@ -16,6 +16,8 @@ Here instead of config file i preferred Env variable which seems easier and port
 PROXY_PATH=/Users/quantum/Desktop/code/http_proxy/proxies.txt  LISTEN_ADDR=127.0.0.1:8100 cargo run
 ```
 
+Here this file  `/Users/quantum/Desktop/code/http_proxy/proxies.txt ` each line has proxy ip address.
+
 After that u can test if its really working or not by using curl
 
 ```
